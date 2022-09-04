@@ -17,7 +17,7 @@ struct DogImageViewModel {
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error fetching dog image data")}
         let picInfo = try JSONDecoder().decode([ImageInfo].self, from: data)
-        var pictureInfo = picInfo[0]
+        let pictureInfo = picInfo[0]
         return pictureInfo
     }
     
@@ -26,7 +26,7 @@ struct DogImageViewModel {
     var listOfDogs = [String]()
     
     for _ in 1...7 {
-        var dogImage = try await fetchDogImage()
+        let dogImage = try await fetchDogImage()
         listOfDogs.append(dogImage.url)
     }
    return listOfDogs

@@ -13,6 +13,7 @@
 		E148A09028C3CD1F00D89168 /* DogCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148A08F28C3CD1F00D89168 /* DogCalendarView.swift */; };
 		E148A09228C3D15400D89168 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148A09128C3D15400D89168 /* ListItemView.swift */; };
 		E148A09428C3D1DD00D89168 /* DogCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148A09328C3D1DD00D89168 /* DogCalendarViewModel.swift */; };
+		E1607B3D28C4405B00D6F971 /* DateOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1607B3C28C4405B00D6F971 /* DateOverlayView.swift */; };
 		E1AB34B628C3FB4A00F78CC8 /* DogImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB34B528C3FB4A00F78CC8 /* DogImageView.swift */; };
 		E1AB34BA28C3FBB600F78CC8 /* DogImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB34B928C3FBB600F78CC8 /* DogImageViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		E148A08F28C3CD1F00D89168 /* DogCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCalendarView.swift; sourceTree = "<group>"; };
 		E148A09128C3D15400D89168 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		E148A09328C3D1DD00D89168 /* DogCalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCalendarViewModel.swift; sourceTree = "<group>"; };
+		E1607B3C28C4405B00D6F971 /* DateOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOverlayView.swift; sourceTree = "<group>"; };
 		E1AB34B528C3FB4A00F78CC8 /* DogImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageView.swift; sourceTree = "<group>"; };
 		E1AB34B928C3FBB600F78CC8 /* DogImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 				E148A08F28C3CD1F00D89168 /* DogCalendarView.swift */,
 				E148A09128C3D15400D89168 /* ListItemView.swift */,
 				E1AB34B528C3FB4A00F78CC8 /* DogImageView.swift */,
+				E1607B3C28C4405B00D6F971 /* DateOverlayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1607B3D28C4405B00D6F971 /* DateOverlayView.swift in Sources */,
 				E148A09428C3D1DD00D89168 /* DogCalendarViewModel.swift in Sources */,
 				E148A09228C3D15400D89168 /* ListItemView.swift in Sources */,
 				E148A09028C3CD1F00D89168 /* DogCalendarView.swift in Sources */,

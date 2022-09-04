@@ -13,11 +13,19 @@ struct DogImageView: View {
 
     var body: some View {
         if let dogImage = dogImage {
-            AsyncImage(url: URL(string: dogImage.url))
+            AsyncImage(url: URL(string: dogImage.url)) { image in
+                image.resizable()
+                    .aspectRatio(contentMode: .fill)
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 380, height: 200)
+            .cornerRadius(30)
+            .clipped()
+            
     } else {
-        ListItemView(str: "Loading")
+        ListItemView(str: "")
             .task {
-            print("trying")
             do {
                 dogImage = try await viewModel.fetchDogImage()
                 
