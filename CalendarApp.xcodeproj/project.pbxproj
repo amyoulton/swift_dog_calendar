@@ -62,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				E148A08928C3C8BB00D89168 /* ViewModels */,
-				E148A08828C3C8B400D89168 /* Models */,
 				E148A08728C3C8AB00D89168 /* Views */,
 				E148A07928C3C88A00D89168 /* CalendarAppApp.swift */,
 				E148A07D28C3C88B00D89168 /* Assets.xcassets */,
@@ -88,13 +87,6 @@
 				E1607B3C28C4405B00D6F971 /* DateOverlayView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		E148A08828C3C8B400D89168 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E148A08928C3C8BB00D89168 /* ViewModels */ = {

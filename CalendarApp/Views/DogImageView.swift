@@ -30,7 +30,7 @@ struct DogImageView: View {
                 dogImage = try await viewModel.fetchDogImage()
                 
             } catch {
-                print("Error getting weather: \(error)")            }
+                print("Error getting dog: \(error)")            }
         }
     }
 

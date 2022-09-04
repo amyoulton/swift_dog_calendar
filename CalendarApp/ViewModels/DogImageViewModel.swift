@@ -20,7 +20,6 @@ struct DogImageViewModel {
         let pictureInfo = picInfo[0]
         return pictureInfo
     }
-    
 
     func getDogs() async throws -> [String] {
     var listOfDogs = [String]()
@@ -32,8 +31,6 @@ struct DogImageViewModel {
    return listOfDogs
     }
 }
-
-
 
 struct ImageInfo: Decodable {
     var id: String
