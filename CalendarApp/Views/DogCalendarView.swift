@@ -7,10 +7,13 @@
 
 import SwiftUI
 
-struct CalendarView: View {
-    var viewModel = CalendarViewModel()
+struct DogCalendarView: View {
+    var viewModel = DogCalendarViewModel()
+    var dogView = DogImageViewModel()
+    
     
     var body: some View {
+
         VStack {
             HStack {
                 Text(viewModel.getMonth(currentDate: Date()))
@@ -18,17 +21,24 @@ struct CalendarView: View {
             }
             HStack {
                 ForEach(0..<viewModel.getWeekList(currentDate: Date()).count, id: \.self) { index in
-                   Text(viewModel.getWeekList(currentDate: Date())[index])
+                    if viewModel.weekList[index] == viewModel.getToday(currentDate: Date()){
+                        Text(viewModel.weekList[index])
+                            .foregroundColor(.red)
+                    } else {
+                        Text(viewModel.weekList[index])
+                    }
+                    
                 }
             }
                 
                 VStack{
                     List {
-                        ForEach(0...7, id: \.self) {
+                        ForEach(0...6, id: \.self) {
                             day in
-                            ListItemView()
+                            ListItemView(str: viewModel.weekList[day])
                         }
                     }.listStyle(SidebarListStyle())
+
                 }
            
         }
@@ -38,7 +48,7 @@ struct CalendarView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        DogCalendarView()
     }
 }
 

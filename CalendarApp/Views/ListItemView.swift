@@ -8,20 +8,38 @@
 import SwiftUI
 
 struct ListItemView: View {
+    var calendarView = DogCalendarViewModel()
+    var dogView = DogImageViewModel()
+    let str: String
+
     var body: some View {
-        Text("Day One")
-            .padding(100)
-            .frame(maxWidth: .infinity)
-            .listRowSeparator(.hidden)
+        if str == calendarView.getToday(currentDate: Date()) {
+            Text(str)
+                .padding(100)
+                .frame(maxWidth: .infinity)
+                .listRowSeparator(.hidden)
+            .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(.green, lineWidth: 4)
+            )
+        } else {
+            Text(str)
+                .padding(100)
+                .frame(maxWidth: .infinity)
+                .listRowSeparator(.hidden)
             .overlay(
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(.blue, lineWidth: 4)
                 )
+        }
+        
     }
+    
 }
+
 
 struct ListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ListItemView()
+        ListItemView(str: "Day One")
     }
 }

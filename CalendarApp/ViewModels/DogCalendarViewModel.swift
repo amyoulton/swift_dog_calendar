@@ -7,11 +7,18 @@
 
 import Foundation
 
-class CalendarViewModel: ObservableObject {
+class DogCalendarViewModel {
     let date = Date()
     let calendar = Calendar.current
     var components: DateComponents {
         calendar.dateComponents([.day, .weekday], from: date)
+    }
+    var weekList = [String]()
+    
+    func getToday(currentDate: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd"
+        return dateFormatter.string(from: currentDate)
     }
     
     func getMonth(currentDate: Date) -> String  {
@@ -34,7 +41,6 @@ class CalendarViewModel: ObservableObject {
     }
     
     func getWeekList(currentDate: Date) -> [String] {
-        var weekList = [String]()
         var week = calendar.dateComponents([.weekOfYear, .yearForWeekOfYear], from: currentDate)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd"
